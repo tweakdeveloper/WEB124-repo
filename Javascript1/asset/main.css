@@ -1,0 +1,107 @@
+/*
+Nicola Clark
+16MAR25
+
+Adapted from https://javascript30.com - Slide in on Scroll
+*/
+
+:root {
+  /*
+  Color palette from coolors:
+  https://coolors.co/e26d5c-403f4c-86cd82-72a276-208aae
+  */
+  --color-blue-bondiblue: #208aae;
+  --color-gray-onyx: #403f4c;
+  --color-green-asparagus: #72a276;
+  --color-green-pistachio: #86cd82;
+  --color-red-bittersweet: #e26d5c;
+
+  /*
+  Layout vars
+
+  Screen width breakpoints from
+  https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+  */
+  --dimen-content-w-md: 75%;
+  --dimen-space-lg: 2.5rem;
+  --dimen-space-md: 1.5rem;
+  --dimen-radius-sm: 1rem;
+  --dimen-screen-w-md: 768px;
+}
+
+html {
+  background: var(--color-green-asparagus);
+  box-sizing: border-box;
+  color: var(--color-gray-onyx);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+
+  /*
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+  */
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 0;
+}
+
+.site-wrap {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background: white;
+  padding: var(--dimen-space-lg);
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  .site-wrap {
+    border-radius: var(--dimen-radius-sm);
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    max-width: var(--dimen-content-w-md);
+  }
+}
+
+.align-left {
+  float: left;
+  margin-right: var(--dimen-space-md);
+}
+
+.align-right {
+  float: right;
+  margin-left: var(--dimen-space-md);
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
