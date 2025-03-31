@@ -1,0 +1,107 @@
+/*
+  Nicola Clark
+  30MAR25
+*/
+
+/*
+  Web fonts from Google Fonts
+
+  Serif: Domine
+  Sans-serif: Nunito Sans
+  Monospace: Fira Code
+*/
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Fira+Code&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+
+  color: var(--color-rich-black);
+
+  /*
+    Colors from coolors.co:
+    https://coolors.co/001524-3c5233-ffecd1-a28497-750d37
+  */
+  --color-claret: #750d37;
+  --color-hunter-green: #3c5233;
+  --color-mountbatten-pink: #a28497;
+  --color-papaya-whip: #ffecd1;
+  --color-rich-black: #001524;
+}
+
+header {
+  background-color: var(--color-rich-black);
+  color: var(--color-papaya-whip);
+
+  padding: 0.5rem 1rem;
+}
+
+h1,
+h2 {
+  font-family: Domine, serif;
+}
+
+main {
+  padding: 0.5rem 1rem;
+}
+
+dl > dt,
+dl > dd:not(:last-child) {
+  margin-bottom: 0.125rem;
+}
+
+dl > dt > span.qNum {
+  font-weight: bold;
+
+  color: var(--color-hunter-green);
+}
+
+dl > dd {
+  background-color: var(--color-hunter-green);
+  color: var(--color-papaya-whip);
+
+  padding: 0.125rem 0.25rem;
+}
+
+dl > dd > code {
+  font-family: 'Fira Code', monospace;
+  font-feature-settings: 'calt';
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--color-rich-black);
+    color: var(--color-papaya-whip);
+  }
+
+  header {
+    border-bottom: 2px dotted var(--color-papaya-whip);
+  }
+
+  dl > dt > span.qNum {
+    color: var(--color-mountbatten-pink);
+  }
+
+  dl > dd {
+    background-color: var(--color-claret);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header,
+  main {
+    padding: 1rem 1.5rem;
+  }
+
+  dl > dt,
+  dl > dd:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
