@@ -31,5 +31,22 @@ function removeArticles(band) {
   return band;
 }
 
-const bandsWithoutArticles = bands.map(removeArticles);
-console.log(bandsWithoutArticles);
+/**
+ * Reinserts articles into a band name
+ * @param {string} band band name to reinsert the article
+ * @returns {string} the band name with the article reinserted (if applicable)
+ */
+function returnArticles(band) {
+  for (const originalBand of bands) {
+    if (originalBand.endsWith(band)) {
+      return originalBand;
+    }
+  }
+
+  // we shouldn't end up here; every band with an article removed should have a
+  // corresponding original band name.
+  return '???';
+}
+
+const sortedBands = bands.map(removeArticles).sort().map(returnArticles);
+console.log(sortedBands);
