@@ -24,7 +24,8 @@ body {
 #bands {
   list-style: inside square;
   background: white;
-  width: 500px;
+  /* 80px is 20px on each side of body bg color + 20px each side for shadow */
+  width: calc(100% - 80px);
   margin: auto;
   padding: 0;
   box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
