@@ -48,5 +48,14 @@ function returnArticles(band) {
   return '???';
 }
 
-const sortedBands = bands.map(removeArticles).sort().map(returnArticles);
-console.log(sortedBands);
+const bandsList = document.getElementById('bands');
+
+bands
+  .map(removeArticles)
+  .sort()
+  .map(returnArticles)
+  .forEach((band) => {
+    const bandListItem = document.createElement('li');
+    bandListItem.textContent = band;
+    bandsList.appendChild(bandListItem);
+  });
