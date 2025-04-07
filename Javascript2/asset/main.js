@@ -1,3 +1,10 @@
+/*
+Nicola Clark
+06APR25
+
+Adapted from https://javascript30.com - Sorting band names without articles
+*/
+
 const bands = [
   'The Plot in You',
   'The Devil Wears Prada',
