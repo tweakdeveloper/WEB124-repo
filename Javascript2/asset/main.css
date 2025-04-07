@@ -35,6 +35,16 @@ body {
   padding: 20px;
 }
 
+#bands li::marker {
+  /*
+   * wanted the list marker to match the border color
+   * MDN to the rescue: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
+   * voila:
+   */
+
+  color: color-mix(in srgb, black 5%, seagreen);
+}
+
 #bands li:last-child {
   border-bottom: 0;
 }
