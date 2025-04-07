@@ -5,8 +5,14 @@ Nicola Clark
 Adapted from https://javascript30.com - Sorting band names without articles
 */
 
-body {
+* {
+  box-sizing: border-box;
+
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: sans-serif;
   background: url('https://source.unsplash.com/nDqA4d5NL0k/2000x2000');
   background-size: cover;
