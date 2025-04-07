@@ -20,11 +20,11 @@ const bands = [
  * @returns {string} the band name with articles removed
  */
 function removeArticles(band) {
-  if (band.substring(0, 3) === 'The') {
+  if (band.substring(0, 4) === 'The ') {
     return band.substring(4);
-  } else if (band.substring(0, 1) === 'A') {
+  } else if (band.substring(0, 2) === 'A ') {
     return band.substring(2);
-  } else if (band.substring(0, 2) === 'An') {
+  } else if (band.substring(0, 3) === 'An ') {
     return band.substring(3);
   }
 
